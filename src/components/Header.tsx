@@ -1,19 +1,37 @@
 import React from "react";
 import { HiMoon, HiSun } from "react-icons/hi2";
 import { AiFillGithub } from "react-icons/ai";
+import { useDarkMode } from "../context/DarkModeContext";
 
 export default function Header() {
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const goGithub = () => {
+    window.open("https://github.com/sunyangy");
+  };
   return (
     <div>
-      <header className="flex justify-between items-center w-full py-8 px-64  bg-transparent border-b-2 bg-opacity-80 shadow-lg">
+      <header className="fixed backdrop-blur flex justify-between items-center w-full py-8 px-64  bg-transparent border-b-2 bg-opacity-80 shadow-lg dark:bg-gray-900/30 dark:border-slate-950 dark:text-white">
         <div>
-          <img src="./favicon.ico" alt="website logo" />
+          {/* <img src="./favicon.ico" alt="website logo" /> */}
+          <h1 className="text-2xl italic bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+            Atmosphere Sleep
+          </h1>
         </div>
         <div className="flex justify-between items-center w-32">
           <div className="flex gap-2">
-            <HiMoon size={24} className="cursor-pointer" />
-            <HiSun size={24} className="cursor-pointer" />
-            <AiFillGithub size={24} className="cursor-pointer" />
+            <div onClick={toggleDarkMode}>
+              {isDarkMode ? (
+                <HiSun size={36} className="cursor-pointer" />
+              ) : (
+                <HiMoon size={36} className="cursor-pointer" />
+              )}
+            </div>
+
+            <AiFillGithub
+              size={36}
+              className="cursor-pointer"
+              onClick={goGithub}
+            />
           </div>
           <div></div>
         </div>

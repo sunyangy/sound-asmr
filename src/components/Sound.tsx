@@ -1,19 +1,22 @@
 import React, { useRef, useState } from "react";
-import { AiFillFire } from "react-icons/ai";
+import { AiFillFire, AiFillApple } from "react-icons/ai";
 import {
   BsFillCloudHailFill,
   BsFillCupHotFill,
   BsFillLightningFill,
   BsSnow2,
   BsBookFill,
+  BsWind,
 } from "react-icons/bs";
+import { IoWater } from "react-icons/io5";
 import VolumeAdjuster from "./VolumeAdjuster";
 
 interface SoundProps {
   name: string;
+  suffix: string;
 }
 
-export default function Sound({ name }: SoundProps) {
+export default function Sound({ name, suffix }: SoundProps) {
   const [isPlayed, setIsPlayed] = useState<boolean>(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [volume, setVolume] = useState<number>(0.5);
@@ -43,46 +46,70 @@ export default function Sound({ name }: SoundProps) {
           {name === "fire" && (
             <AiFillFire
               size={128}
-              className="cursor-pointer"
+              className="cursor-pointer dark:text-indigo-700"
               onClick={changeIsPlayed}
             />
           )}
           {name === "rain" && (
             <BsFillCloudHailFill
               size={128}
-              className="cursor-pointer"
+              className="cursor-pointer dark:text-indigo-700"
               onClick={changeIsPlayed}
             />
           )}
           {name === "lightning" && (
             <BsFillLightningFill
               size={128}
-              className="cursor-pointer"
+              className="cursor-pointer dark:text-indigo-700"
               onClick={changeIsPlayed}
             />
           )}
           {name === "coffee" && (
             <BsFillCupHotFill
               size={128}
-              className="cursor-pointer"
+              className="cursor-pointer dark:text-indigo-700"
               onClick={changeIsPlayed}
             />
           )}
           {name === "snow" && (
             <BsSnow2
               size={128}
-              className="cursor-pointer"
+              className="cursor-pointer dark:text-indigo-700"
               onClick={changeIsPlayed}
             />
           )}
           {name === "book" && (
             <BsBookFill
               size={128}
-              className="cursor-pointer"
+              className="cursor-pointer dark:text-indigo-700"
               onClick={changeIsPlayed}
             />
           )}
-          <audio ref={audioRef} src={`./${name}.mp3`}></audio>
+
+          {name === "wind" && (
+            <BsWind
+              size={128}
+              className="cursor-pointer dark:text-indigo-700"
+              onClick={changeIsPlayed}
+            />
+          )}
+
+          {name === "eat" && (
+            <AiFillApple
+              size={128}
+              className="cursor-pointer dark:text-indigo-700"
+              onClick={changeIsPlayed}
+            />
+          )}
+
+          {name === "river" && (
+            <IoWater
+              size={128}
+              className="cursor-pointer dark:text-indigo-700"
+              onClick={changeIsPlayed}
+            />
+          )}
+          <audio ref={audioRef} src={`./${name}.${suffix}`} loop></audio>
         </div>
         {
           <div className={isPlayed ? "visible" : "invisible"}>
@@ -90,26 +117,6 @@ export default function Sound({ name }: SoundProps) {
           </div>
         }
       </div>
-      {/* <div className="flex items-center justify-center">
-        <AiFillFire size={128} className="cursor-pointer" />
-      </div>
-      <div className="flex items-center justify-center">
-        <AiFillFire size={128} className="cursor-pointer" />
-      </div>
-      <div className="flex items-center justify-center">
-        <AiFillFire size={128} className="cursor-pointer" />
-      </div>
-      <div className="flex items-center justify-center">
-        <AiFillFire size={128} className="cursor-pointer" />
-      </div>
-      <div className="flex items-center justify-center">
-        <AiFillFire size={128} className="cursor-pointer" />
-      </div> */}
-      {/* <AiFillFire size={128} className="cursor-pointer" />
-      <AiFillFire size={128} className="cursor-pointer" />
-      <AiFillFire size={128} className="cursor-pointer" />
-      <AiFillFire size={128} className="cursor-pointer" />
-      <AiFillFire size={128} className="cursor-pointer" /> */}
     </div>
   );
 }
