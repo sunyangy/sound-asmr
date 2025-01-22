@@ -14,7 +14,7 @@ export default function Header() {
         <div>
           {/* <img src="./favicon.ico" alt="website logo" /> */}
           <h1 className="text-2xl italic bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
-            Atmosphere Sleep
+            Atmosphere Focus
           </h1>
         </div>
         <div className="flex justify-between items-center ">
