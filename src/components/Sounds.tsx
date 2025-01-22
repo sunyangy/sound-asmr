@@ -41,7 +41,7 @@ export default function Sounds() {
     },
   ];
   return (
-    <div className=" dark:bg-slate-900 w-full px-64 pt-32 grid grid-cols-3 gap-y-16 justify-center">
+    <div className=" dark:bg-slate-900 w-full px-16 pt-32 md:px-32 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 gap-y-16 justify-center">
       {soundsArr.map((item) => (
         <Sound name={item.name} key={item.name} suffix={item.suffix} />
       ))}

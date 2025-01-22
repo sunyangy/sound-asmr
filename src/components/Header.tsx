@@ -10,14 +10,14 @@ export default function Header() {
   };
   return (
     <div>
-      <header className="fixed backdrop-blur flex justify-between items-center w-full py-8 px-64  bg-transparent border-b-2 bg-opacity-80 shadow-lg dark:bg-gray-900/30 dark:border-slate-950 dark:text-white">
+      <header className="px-8 fixed backdrop-blur flex justify-between items-center w-full py-8 lg:px-64  bg-transparent border-b-2 bg-opacity-80 shadow-lg dark:bg-gray-900/30 dark:border-slate-950 dark:text-white">
         <div>
           {/* <img src="./favicon.ico" alt="website logo" /> */}
           <h1 className="text-2xl italic bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
             Atmosphere Sleep
           </h1>
         </div>
-        <div className="flex justify-between items-center w-32">
+        <div className="flex justify-between items-center ">
           <div className="flex gap-2">
             <div onClick={toggleDarkMode}>
               {isDarkMode ? (

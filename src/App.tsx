@@ -5,7 +5,7 @@ import { DarkModeProvider } from "./context/DarkModeContext";
 
 function App() {
   return (
-    <div className="min-h-screen dark:bg-slate-900 font-serif overflow-hidden">
+    <div className="min-h-screen dark:bg-slate-900 font-serif">
       <DarkModeProvider>
         <Layout />
       </DarkModeProvider>
