@@ -1,4 +1,3 @@
-import React from "react";
 import { HiMoon, HiSun } from "react-icons/hi2";
 import { AiFillGithub } from "react-icons/ai";
 import { useDarkMode } from "../context/DarkModeContext";
