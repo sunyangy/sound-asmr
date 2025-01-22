@@ -1,4 +1,3 @@
-import React from "react";
 import Sound from "./Sound";
 
 export default function Sounds() {

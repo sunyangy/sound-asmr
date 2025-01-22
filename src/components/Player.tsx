@@ -1,9 +1,4 @@
-import React from "react";
-import {
-  AiOutlinePause,
-  AiOutlinePlayCircle,
-  AiOutlineMuted,
-} from "react-icons/ai";
+import { AiOutlinePause, AiOutlineMuted } from "react-icons/ai";
 import { HiOutlinePlay } from "react-icons/hi2";
 
 export default function Player() {

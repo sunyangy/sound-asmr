@@ -38,37 +38,9 @@ export default function VolumeAdjuster({
       />
       {/* 当前音量值 */}
       {/* <span className="text-gray-600">{volume}%</span> */}
-      <style jsx>{`
-        input[type="range"]::-webkit-slider-thumb {
-          appearance: none;
-          height: 16px;
-          width: 16px;
-          border-radius: 50%;
-          background: white; /* 滑块颜色 */
-          border: 2px solid #3b82f6; /* 边框颜色 */
-          box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-        }
-
-        input[type="range"]::-moz-range-thumb {
-          appearance: none;
-          height: 16px;
-          width: 16px;
-          border-radius: 50%;
-          background: white;
-          border: 2px solid #3b82f6;
-          box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-        }
-
-        input[type="range"]::-ms-thumb {
-          appearance: none;
-          height: 16px;
-          width: 16px;
-          border-radius: 50%;
-          background: white;
-          border: 2px solid #3b82f6;
-          box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-        }
-      `}</style>
+      {/* <style jsx>{`
+        
+      `}</style> */}
     </div>
   );
 }
